@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/novcmbro/decoder/main/public/favicon.svg" alt="Decoder logo" width="28px" height="28px"><a name="top"></a> Decoder
+# <img src="https://raw.githubusercontent.com/novcmbro/decoder/main/public/favicon-light.svg" alt="Decoder logo" width="28px" height="28px"><a name="top"></a> Decoder
 
 > Easy text decoder
 
