@@ -1,18 +1,17 @@
-# <img src="https://raw.githubusercontent.com/novcmbro/nome-do-projeto/main/public/favicon.svg" alt="" width="28px" height="28px"><a name="topo"></a> Nome do projeto
+# <img src="https://raw.githubusercontent.com/novcmbro/decoder/main/public/favicon.svg" alt="Decoder logo" width="28px" height="28px"><a name="topo"></a> Decoder
 
-> Curta descrição do projeto
+> Fácil decodificador de texto
 
 ![Licença - MIT](https://img.shields.io/badge/licença-MIT-informational?style=for-the-badge)
 ![Status - Em andamento](https://img.shields.io/badge/status-em_andamento-orange?style=for-the-badge)
-![Status - Completo](https://img.shields.io/badge/status-completo-success?style=for-the-badge)
 ![Autor - Novcmbro](https://img.shields.io/badge/autor-novcmbro-BBBBBB?style=for-the-badge)
 
-<img src="https://raw.githubusercontent.com/novcmbro/novcmbro.github.io/main/src/img/project-nome-do-projeto.png" alt="Nome do projeto" width="400px">
+<img src="https://raw.githubusercontent.com/novcmbro/novcmbro.github.io/main/src/img/project-decoder.png" alt="Decoder" width="400px">
 
-### [**Ver demo 🡭**](https://novcmbro.github.io/nome-do-projeto) | [**Read in English 🡭**](https://novcmbro.github.io/project-name/blob/main/README.md)
+### [**Ver demo 🡭**](https://novcmbro.github.io/decoder) | [**Read in English 🡭**](https://novcmbro.github.io/decoder/blob/main/README.md)
 
 ## Sobre
-Um parágrafo mais detalhado sobre o projeto, mas também um texto não tão longo.
+Decodificador é uma ferramenta para criptografar e descriptografar texto substituindo cada letra por um termo correspondente e vice versa. Isso permite aos usuários transformar uma mensagem em um formato codificado e posteriormente reverter o processo para restaurar o texto original. Este projeto foi proposto pela Oracle Next Education e Alura como parte de seu curso.
 
 ### Construído com
 ![HTML5](https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -22,22 +21,12 @@ Um parágrafo mais detalhado sobre o projeto, mas também um texto não tão lon
 
 <p align="right"><a href="#topo">🡩 voltar ao topo</a></p>
 
-## Primeiros passos
-### Pré-requisitos
-Descrição do software/versão necessária, bibliotecas para instalar, etc.
-1. Instalar algo
-```
-comando aqui
-```
-2. Fazer algo
-3. Fazer algo
-<p align="right"><a href="#topo">🡩 voltar ao topo</a></p>
-
 ## Uso
-Descrição de comandos, ações para testar funcionalidades, etc.
-1. Fazer algo
-2. Fazer algo
-3. Fazer algo
+1. Escreva um texto válido no campo de entrada — deve incluir apenas letras minúsculas sem acento (a-z) e os únicos caracteres especiais permitidos são pontos (.), vírgulas (,), exclamações (!) ou pontos de interrogação (?)
+2. Clique no botão 'Criptografar' para codificar o texto
+3. Na caixa de saída, clique no botão 'Copiar'
+4. Cole o texto copiado no campo de entrada e clique no botão 'Descriptografar'
+5. *Voilà!* Divirta-se inserindo diferentes textos!
 <p align="right"><a href="#topo">🡩 voltar ao topo</a></p>
 
 ## Colaboradores
@@ -61,4 +50,4 @@ Se você deseja contribuir para este projeto, siga os seguintes passos:
 Distribuído sob a Licença MIT. Veja [**LICENSE**](https://github.com/novcmbro/project-name/blob/main/LICENSE) para mais informações.
 <p align="right"><a href="#top">🡩 voltar ao topo</a></p>
 
-> ©2024 Nome do projeto — Feito com 💜 por Novembro
+> ©2024 Decoder — Feito com 💜 por Novembro

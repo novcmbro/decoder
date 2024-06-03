@@ -1,18 +1,17 @@
-# <img src="https://raw.githubusercontent.com/novcmbro/project-name/main/public/favicon.svg" alt="" width="28px" height="28px"><a name="top"></a> Project name
+# <img src="https://raw.githubusercontent.com/novcmbro/decoder/main/public/favicon.svg" alt="Decoder logo" width="28px" height="28px"><a name="top"></a> Decoder
 
-> Short project description
+> Easy text decoder
 
 ![License - MIT](https://img.shields.io/badge/license-MIT-informational?style=for-the-badge)
 ![Status - On going](https://img.shields.io/badge/status-on_going-orange?style=for-the-badge)
-![Status - Completed](https://img.shields.io/badge/status-completed-success?style=for-the-badge)
 ![Author - Novcmbro](https://img.shields.io/badge/author-novcmbro-BBBBBB?style=for-the-badge)
 
-<img src="https://raw.githubusercontent.com/novcmbro/novcmbro.github.io/main/src/img/project-project-name.png" alt="Project name" width="400px">
+<img src="https://raw.githubusercontent.com/novcmbro/novcmbro.github.io/main/src/img/project-decoder.png" alt="Decoder" width="400px">
 
-### [**View demo 🡭**](https://novcmbro.github.io/project-name) | [**Ler em Português 🡭**](https://novcmbro.github.io/project-name/blob/main/docs/pt/README.md)
+### [**View demo 🡭**](https://novcmbro.github.io/decoder) | [**Ler em Português 🡭**](https://novcmbro.github.io/decoder/blob/main/docs/pt/README.md)
 
 ## About
-A more detailed paragraph describing the project, but also a not too long text.
+Decoder is a tool to encrypt and decrypt text by replacing each letter with a corresponding term and vice versa. This allows users to transform a message into a coded format and then reverse the process to restore the original text. This project was proposed by Oracle Next Education and Alura as part of their course.
 
 ### Built With
 ![HTML5](https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -22,22 +21,12 @@ A more detailed paragraph describing the project, but also a not too long text.
 
 <p align="right"><a href="#top">🡩 back to top</a></p>
 
-## Getting Started
-### Prerequisites
-Description of software/version needed, libraries to install, etc.
-1. Install something
-```
-command here
-```
-2. Do something
-3. Do something
-<p align="right"><a href="#top">🡩 back to top</a></p>
-
 ## Usage
-Description of commands, actions to test functionalities, etc.
-1. Do something
-2. Do something
-3. Do something
+1. Write a valid text in input field — it should include only lowercase letters with no accent (a-z) and the only special characters allowed are dots (.), commas (,), exclamations (!) and question (?) marks
+2. Click on 'Encrypt' button to encode text
+3. In output box, click on 'Copy' button
+4. Paste the copied text in input field and click on 'Decrypt' button
+5. *Voilà!* Have fun inserting different texts!
 <p align="right"><a href="#top">🡩 back to top</a></p>
 
 ## Contributors
@@ -58,7 +47,7 @@ If you would like to contribute to this project, follow these steps:
 <p align="right"><a href="#top">🡩 back to top</a></p>
 
 ## License
-Distributed under the MIT License. See [**LICENSE**](https://github.com/novcmbro/project-name/blob/main/LICENSE) for more information.
+Distributed under the MIT License. See [**LICENSE**](https://github.com/novcmbro/decoder/blob/main/LICENSE) for more information.
 <p align="right"><a href="#top">🡩 back to top</a></p>
 
-> ©2024 Project name — Made with 💜 by Novembro
+> ©2024 Decoder — Made with 💜 by Novembro
