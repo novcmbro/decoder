@@ -1,0 +1,57 @@
+:root {
+  /* Colors */
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: rgb(255, 255, 255);
+  /* Fonts */
+  --primary-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-base: 1rem;
+  --font-sm: calc(var(--font-base) / 1.25);
+  --font-md: calc(var(--font-base) * 1.25);
+  --font-lg: calc(var(--font-base) * 1.5);
+  --font-xl: calc(var(--font-base) * 2.5);
+  --font-xxl: calc(var(--font-base) * 3.5);
+  --font-regular: 400;
+  --font-semibold: 600;
+  /* Spacings */
+  --spacing-base: 1rem;
+  --spacing-sm: calc(var(--spacing-base) / 2);
+  --spacing-md: calc(var(--spacing-base) * 1.5);
+  --spacing-lg: calc(var(--spacing-base) * 2);
+  --spacing-xl: calc(var(--spacing-base) * 3);
+  /* Shapes */
+  --shape-sm: 10px;
+  --shape-base: 20px;
+  --shape-full: 50%;
+  /* Shadow */
+  --shadow-offset: 2px 2px;
+  --shadow-blur: 5px;
+  --shadow-color: rgb(0, 0, 0);
+
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  font-size: var(--font-base);
+  font-weight: var(--font-regular);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  font-weight: var(--font-semibold);
+}
+
+p {
+  line-height: 1.5rem;
+}
