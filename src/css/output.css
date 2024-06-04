@@ -17,9 +17,15 @@
   display: none;
 }
 
+.output-placeholder-image {
+  width: 70%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
 .output-placeholder-title {
   font-size: var(--font-lg);
-  margin: var(--spacing-base) 0;
+  margin: var(--spacing-sm) 0;
 }
 
 .output-result {

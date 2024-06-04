@@ -54,17 +54,22 @@ body {
 
 main {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: var(--spacing-base);
   flex-grow: 1;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: var(--spacing-md) var(--spacing-base) var(--spacing-xl) var(--spacing-base);
+  padding: var(--spacing-md);
+  padding-top: 0;
 }
 
 label {
+  position: absolute;
+  top: 0;
+  left: 0;
   font-size: 0;
+  z-index: -9999;
 }
 
 textarea {
@@ -82,4 +87,18 @@ textarea {
 textarea:focus {
   border: none;
   outline: none;
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    flex-direction: row;
+  }
+
+  .input-section {
+    width: 70%;
+  }
+
+  .output-section {
+    width: 50%;
+  }
 }

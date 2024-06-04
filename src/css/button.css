@@ -1,7 +1,7 @@
 .button-container {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-base);
+  gap: var(--spacing-sm) var(--spacing-base);
   width: 100%;
 }
 

@@ -19,6 +19,7 @@
 .input-section.input-field-is-invalid {
   --shake-distance: 5px;
   outline-color: var(--orange);
+  -webkit-animation: shake var(--transition-duration) 2 linear;
   animation: shake var(--transition-duration) 2 linear;
 }
 
@@ -29,10 +30,24 @@
 
 .input-field {
   flex-grow: 1;
+  font-size: var(--font-lg);
 }
 
 .input-field-message {
   font-size: var(--font-sm);
+  text-align: justify;
+}
+
+.input-field-message .alert-icon {
+  float: left;
+  margin-right: var(--spacing-sm);
+}
+
+@-webkit-keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(var(--shake-distance)); }
+  75% { transform: translateX(calc(var(--shake-distance) * -1)); }
+  100% { transform: translateX(0); }
 }
 
 @keyframes shake {
