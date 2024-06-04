@@ -33,6 +33,32 @@
   font-size: var(--font-lg);
 }
 
+.input-field::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.input-field::-moz-placeholder {
+  opacity: 1;
+}
+
+.input-field:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.input-field::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.input-field::placeholder {
+  opacity: 1;
+}
+
+.input-field:placeholder-shown ~ .button-container .button::after {
+  background-color: var(--dark-gray);
+  opacity: 0.47;
+  transition: background-color var(--transition-duration);
+}
+
 .input-field-message {
   font-size: var(--font-sm);
   text-align: justify;
