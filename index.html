@@ -49,7 +49,10 @@
   <main>
     <section class="input-section" aria-labelledby="input-label">
       <label id="input-label" for="input-field">Input</label>
-      <textarea id="input-field" type="text" class="input-field"></textarea>
+      <textarea id="input-field" type="text" class="input-field" aria-labelledby="input-field-message"></textarea>
+      <p id="input-field-message" class="input-field-message" role="alert">
+        Only lowercase letters with no accent (a-z), dots (.), commas (,), exclamation and question marks (! ?) are accepted.
+      </p>
       <div class="button-container">
         <button class="button button-primary">Encrypt</button>
         <button class="button button-secondary">Decrypt</button>

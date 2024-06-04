@@ -1,7 +1,15 @@
 @media (prefers-color-scheme: light) {
   :root {
-    background-color: var(--white);
+    background-color: var(--dark-white);
     color: var(--dark-gray);
+  }
+
+  .input-section {
+    outline-color: var(--white);
+  }
+
+  .output-section {
+    background-color: var(--white);
   }
 }
 
@@ -10,5 +18,13 @@
     --shadow-opacity: 1;
     background-color: var(--black);
     color: var(--white);
+  }
+
+  .input-section {
+    outline-color: var(--light-black);
+  }
+
+  .output-section {
+    background-color: var(--light-black);
   }
 }

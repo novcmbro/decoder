@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   gap: var(--spacing-base);
   width: 100%;
-  margin-top: var(--spacing-base);
 }
 
 .button {
@@ -19,6 +18,7 @@
   font-weight: var(--font-bold);
   text-transform: uppercase;
   padding: calc(var(--spacing-base) / 1.2) var(--spacing-md);
+  z-index: 1;
 }
 
 .button:focus {
