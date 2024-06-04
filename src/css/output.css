@@ -25,7 +25,8 @@
 
 .output-placeholder-title {
   font-size: var(--font-lg);
-  margin: var(--spacing-sm) 0;
+  font-weight: var(--font-bold);
+  margin: var(--spacing-md) 0 var(--spacing-sm) 0;
 }
 
 .output-result {
