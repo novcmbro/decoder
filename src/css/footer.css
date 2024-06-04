@@ -1,0 +1,32 @@
+footer {
+  text-align: center;
+  padding: var(--spacing-base);
+}
+
+.footer-novcmbro-link {
+  position: relative;
+  color: currentColor;
+  text-decoration: none;
+  font-weight: var(--font-bold);
+}
+
+.footer-novcmbro-link:focus {
+  border: none;
+  outline: none;
+}
+
+.footer-novcmbro-link::after {
+  content: "";
+  background: linear-gradient(to right, var(--gradient));
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: var(--border-size);
+}
+
+.footer-novcmbro-link:hover::after,
+.footer-novcmbro-link:focus::after {
+  width: 100%;
+  transition: width var(--transition-duration);
+}

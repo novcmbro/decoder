@@ -1,0 +1,12 @@
+.input-section {
+  box-shadow: var(--shadow);
+  border-radius: var(--shape);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: var(--spacing-md);
+}
+
+.input-field {
+  flex-grow: 1;
+}

@@ -29,13 +29,48 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <!-- CSS -->
   <link rel="stylesheet" href="src/css/reset.css">
   <link rel="stylesheet" href="src/css/index.css">
+  <link rel="stylesheet" href="src/css/header.css">
+  <link rel="stylesheet" href="src/css/footer.css">
+  <link rel="stylesheet" href="src/css/input.css">
+  <link rel="stylesheet" href="src/css/output.css">
+  <link rel="stylesheet" href="src/css/button.css">
+  <link rel="stylesheet" href="src/css/themes.css">
   <!-- Script -->
   <script type="module" src="src/js/index.js" defer></script>
 </head>
 <body>
-  
+  <header>
+    <img src="src/img/decoder-logo.png" alt="Decoder logo" class="logo" role="img">
+  </header>
+  <main>
+    <section class="input-section" aria-labelledby="input-label">
+      <label id="input-label" for="input-field">Input</label>
+      <textarea id="input-field" type="text" class="input-field"></textarea>
+      <div class="button-container">
+        <button class="button button-primary">Encrypt</button>
+        <button class="button button-secondary">Decrypt</button>
+      </div>
+    </section>
+    <section class="output-section" aria-labelledby="output-label">
+      <div class="output-placeholder">
+        <h3 class="output-placeholder-title">No text found.</h3>
+        <p>Type a text you wish to encrypt or decrypt</p>
+      </div>
+      <div class="output-result">
+        <label id="output-label" for="output-field">Output</label>
+        <textarea id="output-field" type="text" readonly tabindex="-1" class="output-field"></textarea>
+        <div class="button-container">
+          <button class="button button-tertiary">Copy</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    made with 💜 by <a href="https://github.com/novcmbro" class="footer-novcmbro-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">Novcmbro</a>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,65 @@
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-base);
+  width: 100%;
+  margin-top: var(--spacing-base);
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  border-radius: var(--shape);
+  cursor: pointer;
+  position: relative;
+  color: var(--white);
+  flex-grow: 1;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  padding: calc(var(--spacing-base) / 1.2) var(--spacing-md);
+}
+
+.button:focus {
+  outline: var(--border-size) solid transparent;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  border-radius: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.button::before {
+  background-image: linear-gradient(to right, var(--gradient));
+  opacity: 0;
+  z-index: -1;
+}
+
+.button::after {
+  z-index: -2;
+}
+
+.button:hover::before,
+.button:focus::before {
+  opacity: 1;
+  transition: opacity var(--transition-duration);
+}
+
+.button-primary::after {
+  background-color: var(--light-green);
+}
+
+.button-secondary::after {
+  background-color: var(--dark-green);
+}
+
+.button-tertiary::after {
+  background-color: var(--medium-blue);
+}
