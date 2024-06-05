@@ -1,4 +1,4 @@
-export const criptographyEntries = {
+export const cryptographyEntries = {
   a: "ai",
   b: "blim",
   c: "corg",
