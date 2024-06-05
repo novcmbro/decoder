@@ -18,16 +18,16 @@ document.addEventListener("DOMContentLoaded", () => {
     return { keys, result }
   }
 
-  const validations = {
-    empty: () => inputField.value.trim() || "Text cannot be empty.",
-    invalidChars: () => inputField.value.trim() && inputField.value.match(/^[a-z.,!?\s]+$/) || "Invalid text. Only lowercase letters with no accent (a-z), dots (.), commas (,), exclamation and question marks (! ?) are accepted.",
-    noCompatibleChars: (target) => inputField.value.match(cryptography(target).keys) || (target === encryptButton ? "Failed to encrypt. Text does not have enough compatible letters." : "Failed to decrypt. Text does not have enough compatible letters."),
-    alreadyDecoded: (target) => outputField.value !== cryptography(target).result || (target === encryptButton ? "Text is already encrypted." : "Text is already decrypted.")
-  }
-
   const validateField = (target) => {
+    const validations = {
+      empty: () => inputField.value.trim() || "Text cannot be empty.",
+      invalidChars: () => inputField.value.trim() && inputField.value.match(/^[a-z.,!?\s]+$/) || "Invalid text. Only lowercase letters with no accent (a-z), dots (.), commas (,), exclamation and question marks (! ?) are accepted.",
+      noCompatibleChars: () => inputField.value.match(cryptography(target).keys) || (target === encryptButton ? "Failed to encrypt. Text does not have enough compatible letters." : "Failed to decrypt. Text does not have enough compatible letters."),
+      alreadyDecoded: () => outputField.value !== cryptography(target).result || (target === encryptButton ? "Text is already encrypted." : "Text is already decrypted.")
+    }
+    
     for (const [name, validation] of Object.entries(validations)) {
-      const result = validation(target)
+      const result = validation()
 
       if (typeof result === "string" && result !== inputField.value) {
         inputFieldMessage.textContent = result
