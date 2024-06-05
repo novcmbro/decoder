@@ -2,12 +2,13 @@ import { cryptographyEntries } from "./cryptographyEntries.js"
 
 document.addEventListener("DOMContentLoaded", () => {
   const inputField = document.querySelector("#input-field")
+  const inputSectionClasses = inputField.parentElement.classList
+  const inputFieldMessage = document.querySelector("#input-field-message")
+  const initialInputFieldMessage = inputFieldMessage.textContent
   const outputField = document.querySelector("#output-field")
   const outputPlaceholder = document.querySelector("#output-placeholder")
   const encryptButton = document.querySelector("#encrypt-button")
   const decryptButton = document.querySelector("#decrypt-button")
-  const inputFieldMessage = document.querySelector("#input-field-message")
-  const initialInputFieldMessage = inputFieldMessage.textContent
 
   const cryptography = (target) => {
     const entries = target === encryptButton ? cryptographyEntries : Object.fromEntries(Object.entries(cryptographyEntries).map(([letter, word]) => [word, letter]))
@@ -30,14 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (typeof result === "string" && result !== inputField.value) {
         inputFieldMessage.textContent = result
-        inputField.parentElement.classList.add("input-field-is-invalid")
+        inputSectionClasses.add("input-field-is-invalid")
         name !== "alreadyDecoded" && (outputField.value = "")
         return false
       }
     }
     
     inputFieldMessage.textContent = initialInputFieldMessage
-    inputField.parentElement.classList.remove("input-field-is-invalid")
+    inputSectionClasses.remove("input-field-is-invalid")
     return true
   }
 
@@ -53,8 +54,18 @@ document.addEventListener("DOMContentLoaded", () => {
     outputPlaceholder.toggleAttribute("aria-hidden", outputField.value)
   }
 
-  inputField.addEventListener("focus", () => inputField.parentElement.classList.add("input-field-has-focus"))
-  inputField.addEventListener("blur", () => inputField.parentElement.classList.remove("input-field-has-focus"))
+  const toggleInputFocusClass = ({ type }) => inputSectionClasses.toggle("input-field-has-focus", type === "focus")
+
+  const clearInputFieldError = () => {
+    if (inputSectionClasses.contains("input-field-is-invalid")) {
+      inputFieldMessage.textContent = initialInputFieldMessage
+      inputSectionClasses.remove("input-field-is-invalid")
+    }
+  }
+
+  inputField.addEventListener("focus", toggleInputFocusClass)
+  inputField.addEventListener("blur", toggleInputFocusClass)
+  inputField.addEventListener("input", clearInputFieldError)
   encryptButton.addEventListener("click", handleCryptography)
   decryptButton.addEventListener("click", handleCryptography)
 })
