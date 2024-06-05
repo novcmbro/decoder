@@ -8,7 +8,7 @@
 
 <img src="https://raw.githubusercontent.com/novcmbro/novcmbro.github.io/main/src/img/project-decoder.png" alt="Decoder" width="400px">
 
-### [**View demo 🡭**](https://novcmbro.github.io/decoder) | [**Ler em Português 🡭**](https://novcmbro.github.io/decoder/blob/main/docs/pt/README.md)
+### [**View demo 🡭**](https://novcmbro.github.io/decoder) | [**Ler em Português 🡭**](https://github.com/novcmbro/decoder/blob/main/docs/pt/README.md)
 
 ## About
 Decoder is a tool to encrypt and decrypt text by replacing each letter with a corresponding term and vice versa. This allows users to transform a message into a coded format and then reverse the process to restore the original text. This project was proposed by Oracle Next Education and Alura as part of their course.
@@ -40,7 +40,7 @@ Email - **novcmbro@gmail.com**
 If you would like to contribute to this project, follow these steps:
 1. Fork the project to your local machine
 2. Create your feature branch: `git checkout -b feature/YourFeatureName`
-3. Make your changes and them: `git add .`
+3. Make your changes and add them: `git add .`
 4. Commit your changes: `git commit -m "Add feature 'your feature name'"`
 5. Push changes to the branch: `git push origin feature/YourFeatureName`
 6. Open a pull request so your changes can be analyzed and included on the project

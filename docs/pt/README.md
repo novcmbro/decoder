@@ -8,7 +8,7 @@
 
 <img src="https://raw.githubusercontent.com/novcmbro/novcmbro.github.io/main/src/img/project-decoder.png" alt="Decoder" width="400px">
 
-### [**Ver demo 🡭**](https://novcmbro.github.io/decoder) | [**Read in English 🡭**](https://novcmbro.github.io/decoder/blob/main/README.md)
+### [**Ver demo 🡭**](https://novcmbro.github.io/decoder) | [**Read in English 🡭**](https://github.com/novcmbro/decoder/blob/main/README.md)
 
 ## Sobre
 Decodificador é uma ferramenta para criptografar e descriptografar texto substituindo cada letra por um termo correspondente e vice versa. Isso permite aos usuários transformar uma mensagem em um formato codificado e posteriormente reverter o processo para restaurar o texto original. Este projeto foi proposto pela Oracle Next Education e Alura como parte de seu curso.
@@ -22,7 +22,7 @@ Decodificador é uma ferramenta para criptografar e descriptografar texto substi
 <p align="right"><a href="#topo">🡩 voltar ao topo</a></p>
 
 ## Uso
-1. Escreva um texto válido no campo de entrada — deve incluir apenas letras minúsculas sem acento (a-z) e os únicos caracteres especiais permitidos são pontos (.), vírgulas (,), exclamações (!) ou pontos de interrogação (?)
+1. Escreva um texto válido no campo de entrada — deve incluir apenas letras minúsculas sem acento (a-z) e os únicos caracteres especiais permitidos são pontos (.), vírgulas (,), exclamações (!) e pontos de interrogação (?)
 2. Clique no botão 'Criptografar' para codificar o texto
 3. Na caixa de saída, clique no botão 'Copiar'
 4. Cole o texto copiado no campo de entrada e clique no botão 'Descriptografar'
@@ -47,7 +47,7 @@ Se você deseja contribuir para este projeto, siga os seguintes passos:
 <p align="right"><a href="#topo">🡩 voltar ao topo</a></p>
 
 ## Licença
-Distribuído sob a Licença MIT. Veja [**LICENSE**](https://github.com/novcmbro/project-name/blob/main/LICENSE) para mais informações.
+Distribuído sob a Licença MIT. Veja [**LICENSE**](https://github.com/novcmbro/decoder/blob/main/LICENSE) para mais informações.
 <p align="right"><a href="#top">🡩 voltar ao topo</a></p>
 
 > ©2024 Decoder — Feito com 💜 por Novembro
