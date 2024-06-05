@@ -22,7 +22,7 @@ Decodificador é uma ferramenta para criptografar e descriptografar texto substi
 <p align="right"><a href="#topo">🡩 voltar ao topo</a></p>
 
 ## Uso
-1. Escreva um texto válido no campo de entrada — deve incluir apenas letras minúsculas sem acento (a-z) e os únicos caracteres especiais permitidos são pontos (.), vírgulas (,), exclamações (!) e pontos de interrogação (?)
+1. Escreva um texto válido no campo de entrada — deve incluir apenas letras minúsculas sem acento (a-z) e os únicos caracteres especiais permitidos são pontos (.), vírgulas (,), pontos de exclamação (!) e interrogação (?)
 2. Clique no botão 'Criptografar' para codificar o texto
 3. Na caixa de saída, clique no botão 'Copiar'
 4. Cole o texto copiado no campo de entrada e clique no botão 'Descriptografar'
