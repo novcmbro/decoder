@@ -1,4 +1,4 @@
-export const cryptographyEntries = {
+const cryptographyEntries = {
   a: "ai",
   b: "blim",
   c: "corg",
@@ -26,3 +26,5 @@ export const cryptographyEntries = {
   y: "yolna",
   z: "zitar",
 }
+
+export default cryptographyEntries

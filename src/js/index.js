@@ -1,4 +1,5 @@
-import { cryptographyEntries } from "./cryptographyEntries.js"
+import cryptographyEntries from "./cryptographyEntries.js"
+import copyOutputText from "./copyOutputText.js"
 
 document.addEventListener("DOMContentLoaded", () => {
   const inputField = document.querySelector("#input-field")
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const outputPlaceholder = document.querySelector("#output-placeholder")
   const encryptButton = document.querySelector("#encrypt-button")
   const decryptButton = document.querySelector("#decrypt-button")
+  const copyButton = document.querySelector("#copy-button")
 
   const cryptography = (target) => {
     const entries = target === encryptButton ? cryptographyEntries : Object.fromEntries(Object.entries(cryptographyEntries).map(([letter, word]) => [word, letter]))
@@ -68,4 +70,5 @@ document.addEventListener("DOMContentLoaded", () => {
   inputField.addEventListener("input", clearInputFieldError)
   encryptButton.addEventListener("click", handleCryptography)
   decryptButton.addEventListener("click", handleCryptography)
+  copyButton.addEventListener("click", () => copyOutputText(outputField))
 })
