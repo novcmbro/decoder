@@ -3,7 +3,6 @@
   border-radius: var(--shape);
   flex-grow: 1;
   padding: var(--spacing-md);
-  transition: background-color var(--transition-duration);
 }
 
 .output-placeholder:not([hidden]) {

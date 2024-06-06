@@ -12,7 +12,10 @@ const theme = {
 
 theme.preferred = () => prefersLightTheme.matches ? "light" : "dark"
 
-theme.update = () => rootElement.className = theme.name()
+theme.update = () => {
+  rootElement.classList.toggle("light", theme.name() === "light")
+  rootElement.classList.toggle("dark", theme.name() === "dark")
+}
 
 theme.init = () => {
   if (!theme.name()) {
@@ -33,6 +36,8 @@ theme.change = ({ currentTarget }) => {
   if (rootElement.className !== themeName) {
     localStorage.setItem(localStorageKey, themeName)
     theme.update()
+    rootElement.classList.add("transition")
+    setTimeout(() => rootElement.classList.remove("transition"), 500)
   }
 }
 

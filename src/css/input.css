@@ -9,6 +9,10 @@
   outline-width: var(--border-size);
   outline-style: solid;
   outline-offset: calc(var(--border-size) * -1);
+}
+
+.input-section.input-field-has-focus,
+.input-section.input-field-is-invalid {
   transition: outline-color var(--transition-duration);
 }
 

@@ -41,7 +41,6 @@
   font-size: var(--font-md);
   font-weight: var(--font-medium);
   scroll-behavior: smooth;
-  transition: background-color var(--transition-duration), color var(--transition-duration);
 }
 
 * {

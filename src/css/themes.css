@@ -3,24 +3,36 @@
   color: var(--dark-gray);
 }
 
-:root.light .input-section:not(.input-field-has-focus, .input-field-is-invalid) {
-  outline-color: var(--white);
-}
-
-:root.light .output-section {
-  background-color: var(--white);
-}
-
 :root.dark {
   --shadow-opacity: 1;
   background-color: var(--black);
   color: var(--white);
 }
 
+:root.transition {
+  transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+
+:root.light .input-section:not(.input-field-has-focus, .input-field-is-invalid) {
+  outline-color: var(--white);
+}
+
 :root.dark .input-section:not(.input-field-has-focus, .input-field-is-invalid) {
   outline-color: var(--light-black);
 }
 
+:root.transition .input-section {
+  transition: outline-color var(--transition-duration);
+}
+
+:root.light .output-section {
+  background-color: var(--white);
+}
+
 :root.dark .output-section {
   background-color: var(--light-black);
+}
+
+:root.transition .output-section {
+  transition: background-color var(--transition-duration);
 }
