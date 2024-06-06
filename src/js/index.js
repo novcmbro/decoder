@@ -1,7 +1,10 @@
+import { changeLanguage, initTranslation, translation } from "./translation.js"
 import cryptographyEntries from "./cryptographyEntries.js"
 import copyOutputText from "./copyOutputText.js"
 
 document.addEventListener("DOMContentLoaded", () => {
+  initTranslation()
+
   const inputField = document.querySelector("#input-field")
   const inputSectionClasses = inputField.parentElement.classList
   const inputFieldMessage = document.querySelector("#input-field-message")
@@ -11,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const encryptButton = document.querySelector("#encrypt-button")
   const decryptButton = document.querySelector("#decrypt-button")
   const copyButton = document.querySelector("#copy-button")
+  const languageLinkEN = document.querySelector("#language-link-en")
+  const languageLinkPT = document.querySelector("#language-link-pt")
 
   const cryptography = (target) => {
     const entries = target === encryptButton ? cryptographyEntries : Object.fromEntries(Object.entries(cryptographyEntries).map(([letter, word]) => [word, letter]))
@@ -22,10 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const validateField = (target) => {
     const validations = {
-      empty: () => inputField.value.trim() || "Text cannot be empty.",
-      invalidChars: () => inputField.value.trim() && inputField.value.match(/^[a-z.,!?\s]+$/) || "Invalid text. Only lowercase letters with no accent (a-z), dots (.), commas (,), exclamation and question marks (! ?) are accepted.",
-      noCompatibleChars: () => inputField.value.match(cryptography(target).keys) || (target === encryptButton ? "Failed to encrypt. Text does not have enough compatible letters." : "Failed to decrypt. Text does not have enough compatible letters."),
-      alreadyDecoded: () => outputField.value !== cryptography(target).result || (target === encryptButton ? "Text is already encrypted." : "Text is already decrypted.")
+      empty: () => inputField.value.trim() || translation("input.validations.empty"),
+      invalidChars: () => inputField.value.trim() && inputField.value.match(/^[a-z.,!?\s]+$/) || translation("input.validations.invalid_chars"),
+      noCompatibleChars: () => inputField.value.match(cryptography(target).keys) || (target === encryptButton ? translation("input.validations.no_compatible_chars.encrypt") : translation("input.validations.no_compatible_chars.decrypt")),
+      alreadyDecoded: () => outputField.value !== cryptography(target).result || (target === encryptButton ? translation("input.validations.already_decoded.encrypt") : translation("input.validations.already_decoded.decrypt"))
     }
     
     for (const [name, validation] of Object.entries(validations)) {
@@ -71,4 +76,12 @@ document.addEventListener("DOMContentLoaded", () => {
   encryptButton.addEventListener("click", handleCryptography)
   decryptButton.addEventListener("click", handleCryptography)
   copyButton.addEventListener("click", () => copyOutputText(outputField))
+  languageLinkEN.addEventListener("click", (e) => {
+    changeLanguage(e)
+    clearInputFieldError()
+  })
+  languageLinkPT.addEventListener("click", (e) => {
+    changeLanguage(e)
+    clearInputFieldError()
+  })
 })

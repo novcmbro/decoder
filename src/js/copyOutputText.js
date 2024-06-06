@@ -1,8 +1,10 @@
+import { translation } from "./translation.js"
+
 const copyOutputText = (outputField) => {
   const message = {
-    success: "Text copied to clipboard!",
-    error: "Something went wrong while copying. Please, try again.",
-    unsupported: "Unfortunately, copy functionality is not available on your browser."
+    success: translation("output.copy.success"),
+    error: translation("output.copy.error"),
+    unsupported: translation("output.copy.unsupported")
   }
   
   if (navigator.clipboard) {
