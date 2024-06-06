@@ -1,11 +1,11 @@
 import theme from "./theme.js"
-import { changeLanguage, initTranslation, translation } from "./translation.js"
+import translation from "./translation.js"
 import cryptographyEntries from "./cryptographyEntries.js"
 import copyOutputText from "./copyOutputText.js"
 
 document.addEventListener("DOMContentLoaded", () => {
   theme.init()
-  initTranslation()
+  translation.init()
 
   const inputField = document.querySelector("#input-field")
   const inputSectionClasses = inputField.parentElement.classList
@@ -31,10 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const validateField = (target) => {
     const validations = {
-      empty: () => inputField.value.trim() || translation("input.validations.empty"),
-      invalidChars: () => inputField.value.trim() && inputField.value.match(/^[a-z.,!?\s]+$/) || translation("input.validations.invalid_chars"),
-      noCompatibleChars: () => inputField.value.match(cryptography(target).keys) || (target === encryptButton ? translation("input.validations.no_compatible_chars.encrypt") : translation("input.validations.no_compatible_chars.decrypt")),
-      alreadyDecoded: () => outputField.value !== cryptography(target).result || (target === encryptButton ? translation("input.validations.already_decoded.encrypt") : translation("input.validations.already_decoded.decrypt"))
+      empty: () => inputField.value.trim() || translation.get("input.validations.empty"),
+      invalidChars: () => inputField.value.trim() && inputField.value.match(/^[a-z.,!?\s]+$/) || translation.get("input.validations.invalid_chars"),
+      noCompatibleChars: () => inputField.value.match(cryptography(target).keys) || (target === encryptButton ? translation.get("input.validations.no_compatible_chars.encrypt") : translation.get("input.validations.no_compatible_chars.decrypt")),
+      alreadyDecoded: () => outputField.value !== cryptography(target).result || (target === encryptButton ? translation.get("input.validations.already_decoded.encrypt") : translation.get("input.validations.already_decoded.decrypt"))
     }
     
     for (const [name, validation] of Object.entries(validations)) {
@@ -77,11 +77,11 @@ document.addEventListener("DOMContentLoaded", () => {
   themeLinkLight.addEventListener("click", theme.change)
   themeLinkDark.addEventListener("click", theme.change)
   languageLinkEN.addEventListener("click", (e) => {
-    changeLanguage(e)
+    translation.change(e)
     clearInputFieldError()
   })
   languageLinkPT.addEventListener("click", (e) => {
-    changeLanguage(e)
+    translation.change(e)
     clearInputFieldError()
   })
   inputField.addEventListener("focus", toggleInputFocusClass)

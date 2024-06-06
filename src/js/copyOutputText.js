@@ -1,10 +1,10 @@
-import { translation } from "./translation.js"
+import translation from "./translation.js"
 
 const copyOutputText = (outputField) => {
   const message = {
-    success: translation("output.copy.success"),
-    error: translation("output.copy.error"),
-    unsupported: translation("output.copy.unsupported")
+    success: translation.get("output.copy.success"),
+    error: translation.get("output.copy.error"),
+    unsupported: translation.get("output.copy.unsupported")
   }
   
   if (navigator.clipboard) {

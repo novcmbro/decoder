@@ -5,10 +5,17 @@ const languages = { en: enUS, pt: ptBR }
 const localStorageKey = "novcmbro_decoder_language"
 const separator = { nesting: ".", word: "_" }
 
-export const translation = (key) => {
+const translation = {
+  language: () => localStorage.getItem(localStorageKey),
+  get: undefined,
+  translateElements: undefined,
+  init: undefined,
+  change: undefined
+}
+
+translation.get = (key) => {
   const nestedId = key.split(separator.nesting)
-  const language = localStorage.getItem(localStorageKey)
-  let text = languages[language]
+  let text = languages[translation.language()]
 
   for (let i = 0; i < nestedId.length; i++) {
     const key = nestedId[i]
@@ -18,26 +25,25 @@ export const translation = (key) => {
   return text
 }
 
-const translateElements = () => {
-  document.querySelectorAll("meta[name='description']").forEach(description => description.content = translation("description"))
-  document.querySelector("meta[name='keywords']").content = translation("keywords")
-  document.querySelector("#input-field").placeholder = translation("input.placeholder")
-  document.querySelector("#output-placeholder-image").alt = translation("output.placeholder.image")
+translation.translateElements = () => {
+  document.querySelectorAll("meta[name='description']").forEach(description => description.content = translation.get("description"))
+  document.querySelector("meta[name='keywords']").content = translation.get("keywords")
+  document.querySelector("#input-field").placeholder = translation.get("input.placeholder")
+  document.querySelector("#output-placeholder-image").alt = translation.get("output.placeholder.image")
 }
 
-export const initTranslation = () => {
+translation.init = () => {
   const navigatorLanguage = navigator.language.split("-")[0].toLowerCase()
   const navigatorOrFallbackLanguage = (navigatorLanguage === "en" || navigatorLanguage === "pt") ? navigatorLanguage : "en"
-  const language = localStorage.getItem(localStorageKey)
   const elements = document.querySelectorAll("[data-translation]")
   
-  if (!language) {
+  if (!translation.language()) {
     localStorage.setItem(localStorageKey, navigatorOrFallbackLanguage)
     window.location.href = "/"
   }
   
-  document.documentElement.lang = language
-  document.querySelector("meta[http-equiv='Content-Language']").content = language
+  document.documentElement.lang = translation.language()
+  document.querySelector("meta[http-equiv='Content-Language']").content = translation.language()
   
   for (const element of elements) {
     const id = element.dataset.translation
@@ -46,15 +52,18 @@ export const initTranslation = () => {
 
     if (hasId && !hasInvalidId) {
       element.ariaLive = "polite"
-      element.textContent = translation(id)
+      element.textContent = translation.get(id)
     }
   }
 
-  translateElements()
+  translation.translateElements()
 }
 
-export const changeLanguage = ({ target }) => {
+translation.change = ({ target }) => {
   localStorage.setItem(localStorageKey, target.textContent.toLowerCase())
-  initTranslation()
-  translateElements()
+  translation.init()
+  translation.translateElements()
 }
+
+const { language, translateElements, ...methods } = translation
+export default methods
