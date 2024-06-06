@@ -42,7 +42,18 @@ const ptBR = {
       label: "Mudar idioma",
       icon: "Globo"
     },
-    credits: "feito com 💜 por"
+    credits: "feito com 💜 por",
+    theme: {
+      label: "Mudar tema",
+      light: {
+        text: "Tema claro",
+        icon: "Sol"
+      },
+      dark: {
+        text: "Tema escuro",
+        icon: "Lua"
+      }
+    }
   }
 }
 

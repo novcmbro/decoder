@@ -1,8 +1,10 @@
+import theme from "./theme.js"
 import { changeLanguage, initTranslation, translation } from "./translation.js"
 import cryptographyEntries from "./cryptographyEntries.js"
 import copyOutputText from "./copyOutputText.js"
 
 document.addEventListener("DOMContentLoaded", () => {
+  theme.init()
   initTranslation()
 
   const inputField = document.querySelector("#input-field")
@@ -16,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const copyButton = document.querySelector("#copy-button")
   const languageLinkEN = document.querySelector("#language-link-en")
   const languageLinkPT = document.querySelector("#language-link-pt")
+  const themeLinkLight = document.querySelector("#theme-link-light")
+  const themeLinkDark = document.querySelector("#theme-link-dark")
 
   const cryptography = (target) => {
     const entries = target === encryptButton ? cryptographyEntries : Object.fromEntries(Object.entries(cryptographyEntries).map(([letter, word]) => [word, letter]))
@@ -70,12 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  inputField.addEventListener("focus", toggleInputFocusClass)
-  inputField.addEventListener("blur", toggleInputFocusClass)
-  inputField.addEventListener("input", clearInputFieldError)
-  encryptButton.addEventListener("click", handleCryptography)
-  decryptButton.addEventListener("click", handleCryptography)
-  copyButton.addEventListener("click", () => copyOutputText(outputField))
+  themeLinkLight.addEventListener("click", theme.change)
+  themeLinkDark.addEventListener("click", theme.change)
   languageLinkEN.addEventListener("click", (e) => {
     changeLanguage(e)
     clearInputFieldError()
@@ -84,4 +84,10 @@ document.addEventListener("DOMContentLoaded", () => {
     changeLanguage(e)
     clearInputFieldError()
   })
+  inputField.addEventListener("focus", toggleInputFocusClass)
+  inputField.addEventListener("blur", toggleInputFocusClass)
+  inputField.addEventListener("input", clearInputFieldError)
+  encryptButton.addEventListener("click", handleCryptography)
+  decryptButton.addEventListener("click", handleCryptography)
+  copyButton.addEventListener("click", () => copyOutputText(outputField))
 })

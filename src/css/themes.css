@@ -1,30 +1,26 @@
-@media (prefers-color-scheme: light) {
-  :root {
-    background-color: var(--dark-white);
-    color: var(--dark-gray);
-  }
-
-  .input-section {
-    outline-color: var(--white);
-  }
-
-  .output-section {
-    background-color: var(--white);
-  }
+:root.light {
+  background-color: var(--dark-white);
+  color: var(--dark-gray);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --shadow-opacity: 1;
-    background-color: var(--black);
-    color: var(--white);
-  }
+:root.light .input-section:not(.input-field-has-focus, .input-field-is-invalid) {
+  outline-color: var(--white);
+}
 
-  .input-section {
-    outline-color: var(--light-black);
-  }
+:root.light .output-section {
+  background-color: var(--white);
+}
 
-  .output-section {
-    background-color: var(--light-black);
-  }
+:root.dark {
+  --shadow-opacity: 1;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+:root.dark .input-section:not(.input-field-has-focus, .input-field-is-invalid) {
+  outline-color: var(--light-black);
+}
+
+:root.dark .output-section {
+  background-color: var(--light-black);
 }

@@ -42,7 +42,18 @@ const enUS = {
       label: "Change language",
       icon: "Globe"
     },
-    credits: "made with 💜 by"
+    credits: "made with 💜 by",
+    theme: {
+      label: "Change theme",
+      light: {
+        text: "Light theme",
+        icon: "Sun"
+      },
+      dark: {
+        text: "Dark theme",
+        icon: "Moon"
+      }
+    }
   }
 }
 
