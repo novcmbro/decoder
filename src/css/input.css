@@ -65,7 +65,6 @@
 
 .input-field-message {
   font-size: var(--font-sm);
-  text-align: justify;
 }
 
 .input-field-message .alert-icon {
