@@ -3,8 +3,8 @@ const localStorageKey = "novcmbro_decoder_theme"
 const rootElement = document.documentElement
 
 const theme = {
+  name: () => localStorage.getItem(localStorageKey),
   preferred: undefined,
-  db: () => localStorage.getItem(localStorageKey),
   update: undefined,
   init: undefined,
   change: undefined
@@ -12,10 +12,10 @@ const theme = {
 
 theme.preferred = () => prefersLightTheme.matches ? "light" : "dark"
 
-theme.update = () => rootElement.className = theme.db()
+theme.update = () => rootElement.className = theme.name()
 
 theme.init = () => {
-  if (!theme.db()) {
+  if (!theme.name()) {
     localStorage.setItem(localStorageKey, theme.preferred())
   }
 
