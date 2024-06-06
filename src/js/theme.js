@@ -13,7 +13,7 @@ const theme = {
 theme.preferred = () => prefersLightTheme.matches ? "light" : "dark"
 
 theme.update = () => {
-  const updateURL = (element) => theme.name() === "light" ? element.replace("dark", "light") : element.replace("light", "dark")
+  const updateURL = (url) => theme.name() === "light" ? url.replace("dark", "light") : url.replace("light", "dark")
 
   document.querySelectorAll("[name='favicon']").forEach(favicon => favicon.href = updateURL(favicon.href))
   rootElement.classList.toggle("light", theme.name() === "light")
