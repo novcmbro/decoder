@@ -1,8 +1,10 @@
 <div id="topo" align="center">
-  <picture>
-    <source srcset="https://raw.githubusercontent.com/novcmbro/decoder/main/src/img/decoder-logo-dark.png" media="(prefers-color-scheme: dark)">
-    <img src="https://raw.githubusercontent.com/novcmbro/decoder/main/src/img/decoder-logo-light.png" alt="Decoder" width="300px">
-  </picture>
+  <h1>
+    <picture>
+      <source srcset="https://raw.githubusercontent.com/novcmbro/decoder/main/src/img/decoder-logo-dark.png" media="(prefers-color-scheme: dark)">
+      <img src="https://raw.githubusercontent.com/novcmbro/decoder/main/src/img/decoder-logo-light.png" alt="Decoder" width="300px">
+    </picture>
+  </h1>
 
   ### Fácil decodificador de texto
 
