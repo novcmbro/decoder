@@ -1,12 +1,15 @@
-# <img src="https://raw.githubusercontent.com/novcmbro/decoder/main/public/favicon-light.svg" alt="Decoder logo" width="28px" height="28px"><a name="top"></a> Decoder
+# <a id="top"><picture><source srcset="https://raw.githubusercontent.com/novcmbro/decoder/main/src/img/decoder-logo-dark.png" media="(prefers-color-scheme: dark)"><img src="https://raw.githubusercontent.com/novcmbro/decoder/main/src/img/decoder-logo-light.png" alt="Decoder" width="300px"></picture></a>
 
 > Easy text decoder
 
 ![License - MIT](https://img.shields.io/badge/license-MIT-informational?style=for-the-badge)
-![Status - On going](https://img.shields.io/badge/status-on_going-orange?style=for-the-badge)
+![Status - Completed](https://img.shields.io/badge/status-completed-success?style=for-the-badge)
 ![Author - Novcmbro](https://img.shields.io/badge/author-novcmbro-BBBBBB?style=for-the-badge)
 
-<img src="https://raw.githubusercontent.com/novcmbro/novcmbro.github.io/main/src/img/project-decoder.png" alt="Decoder" width="400px">
+<picture>
+  <source srcset="https://raw.githubusercontent.com/novcmbro/novcmbro.github.io/main/src/img/project-decoder-dark.png" media="(prefers-color-scheme: dark)">
+  <img src="https://raw.githubusercontent.com/novcmbro/novcmbro.github.io/main/src/img/project-decoder-light.png" alt="Decoder" width="480px">
+</picture>
 
 ### [**View demo 🡭**](https://novcmbro.github.io/decoder) | [**Ler em Português 🡭**](https://github.com/novcmbro/decoder/blob/main/docs/pt/README.md)
 
