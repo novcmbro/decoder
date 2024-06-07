@@ -4,7 +4,6 @@ import cryptographyEntries from "./cryptographyEntries.js"
 const inputField = document.querySelector("#input-field")
 const inputSectionClasses = inputField.parentElement.classList
 const inputFieldMessage = document.querySelector("#input-field-message")
-const initialInputFieldMessage = inputFieldMessage.textContent
 const outputField = document.querySelector("#output-field")
 const outputPlaceholder = document.querySelector("#output-placeholder")
 const encryptButton = document.querySelector("#encrypt-button")
@@ -49,7 +48,7 @@ cryptography.validate = (target) => {
     }
   }
   
-  inputFieldMessage.textContent = initialInputFieldMessage
+  inputFieldMessage.textContent = translation.get("input.message.text")
   return true
 }
 
@@ -77,7 +76,7 @@ input.toggleSectionFocus = ({ type }) => {
 
 input.clearError = () => {
   if (inputSectionClasses.contains("input-field-is-invalid")) {
-    inputFieldMessage.textContent = initialInputFieldMessage
+    inputFieldMessage.textContent = translation.get("input.message.text")
     inputSectionClasses.remove("input-field-is-invalid")
   }
 }
