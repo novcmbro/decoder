@@ -6,8 +6,8 @@ const theme = {
   name: () => localStorage.getItem(localStorageKey),
   preferred: undefined,
   update: undefined,
-  init: undefined,
-  change: undefined
+  change: undefined,
+  init: undefined
 }
 
 theme.preferred = () => prefersLightTheme.matches ? "light" : "dark"
@@ -23,19 +23,6 @@ theme.update = () => {
   logo.src = updateURL(logo.src)
 }
 
-theme.init = () => {
-  if (!theme.name()) {
-    localStorage.setItem(localStorageKey, theme.preferred())
-  }
-
-  prefersLightTheme.addEventListener("change", () => {
-    localStorage.setItem(localStorageKey, theme.preferred())
-    theme.update()
-  })
-  
-  theme.update()
-}
-
 theme.change = ({ currentTarget }) => {
   const themeName = currentTarget.classList[1]
 
@@ -47,5 +34,22 @@ theme.change = ({ currentTarget }) => {
   }
 }
 
-const { init, change } = theme
-export default { init, change }
+theme.init = () => {
+  if (!theme.name()) {
+    localStorage.setItem(localStorageKey, theme.preferred())
+  }
+
+  prefersLightTheme.addEventListener("change", () => {
+    localStorage.setItem(localStorageKey, theme.preferred())
+    theme.update()
+  })
+  
+  theme.update()
+
+  document.querySelectorAll("[name='theme-link']").forEach(themeLink => {
+    themeLink.addEventListener("click", theme.change)
+  })
+}
+
+const { init } = theme
+export default { init }

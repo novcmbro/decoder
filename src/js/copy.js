@@ -1,7 +1,14 @@
 import translation from "./translation.js"
 import popup from "./popup.js"
 
-const copyOutputText = (outputField) => {
+const copy = {
+  handle: undefined,
+  init: undefined
+}
+
+copy.handle = () => {
+  const outputField = document.querySelector("#output-field")
+
   const message = {
     success: translation.get("output.copy.success"),
     error: translation.get("output.copy.error"),
@@ -25,4 +32,9 @@ const copyOutputText = (outputField) => {
   popup.open(message.unsupported)
 }
 
-export default copyOutputText
+copy.init = () => {
+  document.querySelector("#copy-button").addEventListener("click", copy.handle)
+}
+
+const { init } = copy
+export default { init }

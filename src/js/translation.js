@@ -1,5 +1,6 @@
 import enUS from "../locales/en-us.js"
 import ptBR from "../locales/pt-br.js"
+import { inputState } from "./cryptography.js"
 
 const languages = { en: enUS, pt: ptBR }
 const localStorageKey = "novcmbro_decoder_language"
@@ -9,8 +10,8 @@ const translation = {
   language: () => localStorage.getItem(localStorageKey),
   get: undefined,
   translateElements: undefined,
-  init: undefined,
-  change: undefined
+  change: undefined,
+  init: undefined
 }
 
 translation.get = (key) => {
@@ -32,6 +33,12 @@ translation.translateElements = () => {
   document.querySelector("#output-placeholder-image").alt = translation.get("output.placeholder.image")
 }
 
+translation.change = ({ target }) => {
+  localStorage.setItem(localStorageKey, target.textContent.toLowerCase())
+  translation.init()
+  translation.translateElements()
+}
+
 translation.init = () => {
   const navigatorLanguage = navigator.language.split("-")[0].toLowerCase()
   const navigatorOrFallbackLanguage = (navigatorLanguage === "en" || navigatorLanguage === "pt") ? navigatorLanguage : "en"
@@ -47,7 +54,7 @@ translation.init = () => {
   
   for (const element of elements) {
     const id = element.dataset.translation
-    const hasId = !!id.trim()
+    const hasId = id.trim()
     const hasInvalidId = hasId && !id.match(`^[a-z${separator.nesting}${separator.word}]+$`)
 
     if (hasId && !hasInvalidId) {
@@ -57,13 +64,14 @@ translation.init = () => {
   }
 
   translation.translateElements()
+
+  document.querySelectorAll("[name='language-link']").forEach(languageLink => {
+    languageLink.addEventListener("click", (e) => {
+      translation.change(e)
+      inputState.clearError()
+    })
+  })
 }
 
-translation.change = ({ target }) => {
-  localStorage.setItem(localStorageKey, target.textContent.toLowerCase())
-  translation.init()
-  translation.translateElements()
-}
-
-const { language, translateElements, ...methods } = translation
-export default methods
+const { get, init } = translation
+export default { get, init }

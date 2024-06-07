@@ -1,7 +1,8 @@
 const popup = {
   toggleVisibility: undefined,
   open: undefined,
-  close: undefined
+  close: undefined,
+  init: undefined
 }
 
 popup.toggleVisibility = () => {
@@ -18,5 +19,9 @@ popup.open = (message) => {
 
 popup.close = popup.toggleVisibility
 
-const { open, close } = popup
-export default { open, close }
+popup.init = () => {
+  document.querySelector("#popup-ok-button").addEventListener("click", popup.close)
+}
+
+const { open, init } = popup
+export default { open, init }
