@@ -15,6 +15,7 @@ theme.preferred = () => prefersLightTheme.matches ? "light" : "dark"
 theme.update = () => {
   const updateURL = (url) => theme.name() === "light" ? url.replace("dark", "light") : url.replace("light", "dark")
 
+  document.querySelectorAll("meta[name='image']").forEach(image => image.content = updateURL(image.content))
   document.querySelectorAll("[name='favicon']").forEach(favicon => favicon.href = updateURL(favicon.href))
   rootElement.classList.toggle("light", theme.name() === "light")
   rootElement.classList.toggle("dark", theme.name() === "dark")
