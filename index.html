@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="src/css/input.css">
   <link rel="stylesheet" href="src/css/output.css">
   <link rel="stylesheet" href="src/css/button.css">
+  <link rel="stylesheet" href="src/css/popup.css">
   <link rel="stylesheet" href="src/css/themes.css">
   <!-- Script -->
   <script type="module" src="src/js/index.js" defer></script>
@@ -70,7 +71,7 @@
         <label id="output-label" for="output-field" data-translation="output.label">Output</label>
         <textarea id="output-field" class="output-field" readonly tabindex="-1" aria-readonly="true" aria-disabled="true"></textarea>
         <div class="button-container">
-          <button id="copy-button" type="button" class="button button-tertiary" data-translation="output.copy.text">Copy</button>
+          <button id="copy-button" type="button" class="button button-tertiary" aria-controls="popup" aria-haspopup="dialog" data-translation="output.copy.text">Copy</button>
         </div>
       </div>
     </section>
@@ -112,5 +113,13 @@
       </nav>
     </div>
   </footer>
+  <div id="popup" class="popup-container" role="dialog" aria-modal="true" aria-labelledby="popup-message" hidden aria-hidden="true">
+    <div class="popup">
+      <p id="popup-message" class="popup-message"></p>
+      <div class="button-container">
+        <button id="popup-ok-button" type="button" class="button button-primary">OK</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

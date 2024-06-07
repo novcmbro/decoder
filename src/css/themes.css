@@ -25,11 +25,11 @@
   transition: outline-color var(--transition-duration);
 }
 
-:root.light .output-section {
+:root.light .output-section, :root.light .popup {
   background-color: var(--white);
 }
 
-:root.dark .output-section {
+:root.dark .output-section, :root.dark .popup {
   background-color: var(--light-black);
 }
 

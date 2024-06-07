@@ -1,4 +1,5 @@
 import translation from "./translation.js"
+import popup from "./popup.js"
 
 const copyOutputText = (outputField) => {
   const message = {
@@ -9,19 +10,19 @@ const copyOutputText = (outputField) => {
   
   if (navigator.clipboard) {
     navigator.clipboard.writeText(outputField.value)
-      .then(() => alert(message.success))
-      .catch(() => alert(message.error))
+      .then(() => popup.open(message.success))
+      .catch(() => popup.open(message.error))
     return
   }
 
   if (document.execCommand("copy")) {
     outputField.select()
     const copy = document.execCommand("copy")
-    copy ? alert(message.success) : alert(message.error)
+    copy ? popup.open(message.success) : popup.open(message.error)
     return
   }
   
-  alert(message.unsupported)
+  popup.open(message.unsupported)
 }
 
 export default copyOutputText

@@ -2,11 +2,16 @@ import theme from "./theme.js"
 import translation from "./translation.js"
 import cryptographyEntries from "./cryptographyEntries.js"
 import copyOutputText from "./copyOutputText.js"
+import popup from "./popup.js"
 
 document.addEventListener("DOMContentLoaded", () => {
   theme.init()
   translation.init()
 
+  const themeLinkLight = document.querySelector("#theme-link-light")
+  const themeLinkDark = document.querySelector("#theme-link-dark")
+  const languageLinkEN = document.querySelector("#language-link-en")
+  const languageLinkPT = document.querySelector("#language-link-pt")
   const inputField = document.querySelector("#input-field")
   const inputSectionClasses = inputField.parentElement.classList
   const inputFieldMessage = document.querySelector("#input-field-message")
@@ -16,10 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const encryptButton = document.querySelector("#encrypt-button")
   const decryptButton = document.querySelector("#decrypt-button")
   const copyButton = document.querySelector("#copy-button")
-  const languageLinkEN = document.querySelector("#language-link-en")
-  const languageLinkPT = document.querySelector("#language-link-pt")
-  const themeLinkLight = document.querySelector("#theme-link-light")
-  const themeLinkDark = document.querySelector("#theme-link-dark")
+  const popupOkButton = document.querySelector("#popup-ok-button")
 
   const cryptography = (target) => {
     const entries = target === encryptButton ? cryptographyEntries : Object.fromEntries(Object.entries(cryptographyEntries).map(([letter, word]) => [word, letter]))
@@ -90,4 +92,5 @@ document.addEventListener("DOMContentLoaded", () => {
   encryptButton.addEventListener("click", handleCryptography)
   decryptButton.addEventListener("click", handleCryptography)
   copyButton.addEventListener("click", () => copyOutputText(outputField))
+  popupOkButton.addEventListener("click", popup.close)
 })
