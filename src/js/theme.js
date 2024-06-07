@@ -1,6 +1,6 @@
 const prefersLightTheme = window.matchMedia("(prefers-color-scheme: light)")
 const localStorageKey = "novcmbro_decoder_theme"
-const rootElement = document.documentElement
+const rootClasses = document.documentElement.classList
 
 const theme = {
   name: () => localStorage.getItem(localStorageKey),
@@ -15,10 +15,10 @@ theme.preferred = () => prefersLightTheme.matches ? "light" : "dark"
 theme.update = () => {
   const updateURL = (url) => theme.name() === "light" ? url.replace("dark", "light") : url.replace("light", "dark")
 
+  rootClasses.toggle("light")
+  rootClasses.toggle("dark")
   document.querySelectorAll("meta[name='image']").forEach(image => image.content = updateURL(image.content))
   document.querySelectorAll("[name='favicon']").forEach(favicon => favicon.href = updateURL(favicon.href))
-  rootElement.classList.toggle("light", theme.name() === "light")
-  rootElement.classList.toggle("dark", theme.name() === "dark")
   const logo = document.querySelector("#logo")
   logo.src = updateURL(logo.src)
 }
@@ -26,11 +26,11 @@ theme.update = () => {
 theme.change = ({ currentTarget }) => {
   const themeName = currentTarget.classList[1]
 
-  if (rootElement.className !== themeName) {
+  if (!rootClasses.contains(themeName)) {
     localStorage.setItem(localStorageKey, themeName)
     theme.update()
-    rootElement.classList.add("transition")
-    setTimeout(() => rootElement.classList.remove("transition"), 500)
+    rootClasses.add("transition")
+    setTimeout(() => rootClasses.remove("transition"), 500)
   }
 }
 
