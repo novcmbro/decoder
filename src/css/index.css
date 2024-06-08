@@ -9,7 +9,7 @@
   --dark-green: #27a186;
   --medium-blue: #195f74;
   --orange: #fc6453;
-  --gradient: #9303f5, #d803db, #fe1d59, #fc6453, #ffae3e, #ffed18;
+  --gradient: linear-gradient(to right, #9303f5, #d803db, #fe1d59, #fc6453, #ffae3e, #ffed18);
   /* Fonts */
   --primary-font: "Rubik", sans-serif;
   --font-base: 1rem;
@@ -81,7 +81,7 @@ a:focus {
 
 a::after {
   content: "";
-  background: linear-gradient(to right, var(--gradient));
+  background-image: var(--gradient);
   position: absolute;
   top: 100%;
   left: 0;

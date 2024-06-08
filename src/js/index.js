@@ -5,6 +5,7 @@ import copy from "./copy.js"
 import popup from "./popup.js"
 
 document.addEventListener("DOMContentLoaded", () => {
+  document.documentElement.classList.add("js-enabled")
   theme.init()
   translation.init()
   decoder.init()

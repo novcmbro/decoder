@@ -37,7 +37,7 @@
 }
 
 .button::before {
-  background-image: linear-gradient(to right, var(--gradient));
+  background-image: var(--gradient);
   opacity: 0;
   z-index: -1;
 }

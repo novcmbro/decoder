@@ -1,0 +1,29 @@
+:root:not(.js-enabled) main {
+  flex-direction: initial;
+  align-items: center;
+  max-width: 720px;
+}
+
+:root:not(.js-enabled) .input-section,
+:root:not(.js-enabled) .output-section,
+:root:not(.js-enabled) .footer-nav {
+  display: none;
+}
+
+:root:not(.js-enabled) .footer-credits {
+  margin: 0 auto;
+}
+
+noscript *:not(:first-child) {
+  margin-top: var(--spacing-md);
+}
+
+noscript *:not(:first-child)::before {
+  content: "";
+  background-color: currentColor;
+  display: block;
+  width: 100%;
+  height: var(--border-size);
+  margin-bottom: var(--spacing-md);
+  opacity: 0.1;
+}
