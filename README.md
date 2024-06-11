@@ -50,7 +50,8 @@ Decoder is a tool to encrypt and decrypt text by replacing each letter with a co
 | [<img src="https://github.com/novcmbro.png" alt="Novcmbro" width="100px" height="100px"><br><sub>Novcmbro</sub>](https://github.com/novcmbro) |
 | :---: |
 
-Email - **novcmbro@gmail.com**
+[![Gmail](https://img.shields.io/badge/gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:novcmbro@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/linkedin-0077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/novcmbro/)
 <p align="right"><a href="#top">🡩 back to top</a></p>
 
 ## Contribution

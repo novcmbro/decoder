@@ -50,7 +50,8 @@ Decodificador é uma ferramenta para criptografar e descriptografar texto substi
 | [<img src="https://github.com/novcmbro.png" alt="Novembro" width="100px" height="100px"><br><sub>Novembro</sub>](https://github.com/novcmbro) |
 | :---: |
 
-Email - **novcmbro@gmail.com**
+[![Gmail](https://img.shields.io/badge/gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:novcmbro@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/linkedin-0077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/novcmbro/)
 <p align="right"><a href="#topo">🡩 voltar ao topo</a></p>
 
 ## Contribuição
