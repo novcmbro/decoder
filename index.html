@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,7 +44,7 @@
   <!-- Script -->
   <script type="module" src="src/js/index.js" defer></script>
 </head>
-<body>
+<body aria-live="polite">
   <header>
     <img id="logo" src="src/img/decoder-logo-light.png" alt="Decoder logo" class="logo" role="img">
   </header>
@@ -66,8 +66,8 @@
     <section class="input-section" aria-labelledby="input-label">
       <label id="input-label" for="input-field" data-translation="input.label">Input</label>
       <textarea id="input-field" placeholder="Type your text" class="input-field" aria-describedby="input-field-message"></textarea>
-      <div class="input-field-message" role="alert" aria-live="assertive" aria-atomic="true">
-        <span id="alert-icon-label" hidden aria-hidden="true" data-translation="input.message.icon">Alert</span>
+      <div class="input-field-message">
+        <span id="alert-icon-label" class="sr-only" data-translation="input.message.icon">Alert</span>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="alert-icon" aria-labelledby="alert-icon-label">
           <path d="M16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8ZM8 4C7.87361 4.00007 7.74863 4.02662 7.63312 4.07793C7.51761 4.12924 7.41413 4.20418 7.32934 4.29791C7.24456 4.39165 7.18035 4.5021 7.14084 4.62217C7.10134 4.74223 7.08743 4.86923 7.1 4.995L7.45 8.502C7.46176 8.63977 7.5248 8.76811 7.62664 8.86164C7.72849 8.95516 7.86173 9.00705 8 9.00705C8.13827 9.00705 8.27151 8.95516 8.37336 8.86164C8.4752 8.76811 8.53824 8.63977 8.55 8.502L8.9 4.995C8.91257 4.86923 8.89866 4.74223 8.85915 4.62217C8.81965 4.5021 8.75544 4.39165 8.67066 4.29791C8.58587 4.20418 8.48239 4.12924 8.36688 4.07793C8.25137 4.02662 8.12639 4.00007 8 4ZM8.002 10C7.73678 10 7.48243 10.1054 7.29489 10.2929C7.10736 10.4804 7.002 10.7348 7.002 11C7.002 11.2652 7.10736 11.5196 7.29489 11.7071C7.48243 11.8946 7.73678 12 8.002 12C8.26722 12 8.52157 11.8946 8.70911 11.7071C8.89664 11.5196 9.002 11.2652 9.002 11C9.002 10.7348 8.89664 10.4804 8.70911 10.2929C8.52157 10.1054 8.26722 10 8.002 10Z"></path>
         </svg>
@@ -92,37 +92,38 @@
         </div>
       </div>
     </section>
+    <p id="sr-alert" class="sr-only" role="alert"></p>
   </main>
   <footer>
     <div class="container">
       <nav class="footer-nav" aria-labelledby="language-nav-label">
-        <span id="language-nav-label" hidden aria-hidden="true" data-translation="footer.language.label">Change language</span>
-        <span id="language-icon-label" hidden aria-hidden="true" data-translation="footer.language.icon">Globe</span>
+        <span id="language-nav-label" class="sr-only" data-translation="footer.language.label">Change language</span>
+        <span id="language-icon-label" class="sr-only" data-translation="footer.language.icon">Globe</span>
         <svg width="24" height="24" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="language-icon" aria-labelledby="language-icon-label">
           <g transform="translate(-204.000000, -671.000000)" fill="currentColor">
             <path d="M231.596,694.829 C229.681,694.192 227.622,693.716 225.455,693.408 C225.75,691.675 225.907,689.859 225.957,688 L233.962,688 C233.783,690.521 232.936,692.854 231.596,694.829 L231.596,694.829 Z M223.434,700.559 C224.1,698.95 224.645,697.211 225.064,695.379 C226.862,695.645 228.586,696.038 230.219,696.554 C228.415,698.477 226.073,699.892 223.434,700.559 L223.434,700.559 Z M220.971,700.951 C220.649,700.974 220.328,701 220,701 C219.672,701 219.352,700.974 219.029,700.951 C218.178,699.179 217.489,697.207 216.979,695.114 C217.973,695.027 218.98,694.976 220,694.976 C221.02,694.976 222.027,695.027 223.022,695.114 C222.511,697.207 221.822,699.179 220.971,700.951 L220.971,700.951 Z M209.781,696.554 C211.414,696.038 213.138,695.645 214.936,695.379 C215.355,697.211 215.9,698.95 216.566,700.559 C213.927,699.892 211.586,698.477 209.781,696.554 L209.781,696.554 Z M208.404,694.829 C207.064,692.854 206.217,690.521 206.038,688 L214.043,688 C214.093,689.859 214.25,691.675 214.545,693.408 C212.378,693.716 210.319,694.192 208.404,694.829 L208.404,694.829 Z M208.404,679.171 C210.319,679.808 212.378,680.285 214.545,680.592 C214.25,682.325 214.093,684.141 214.043,686 L206.038,686 C206.217,683.479 207.064,681.146 208.404,679.171 L208.404,679.171 Z M216.566,673.441 C215.9,675.05 215.355,676.789 214.936,678.621 C213.138,678.356 211.414,677.962 209.781,677.446 C211.586,675.523 213.927,674.108 216.566,673.441 L216.566,673.441 Z M219.029,673.049 C219.352,673.027 219.672,673 220,673 C220.328,673 220.649,673.027 220.971,673.049 C221.822,674.821 222.511,676.794 223.022,678.886 C222.027,678.973 221.02,679.024 220,679.024 C218.98,679.024 217.973,678.973 216.979,678.886 C217.489,676.794 218.178,674.821 219.029,673.049 L219.029,673.049 Z M223.954,688 C223.9,689.761 223.74,691.493 223.439,693.156 C222.313,693.058 221.168,693 220,693 C218.832,693 217.687,693.058 216.562,693.156 C216.26,691.493 216.1,689.761 216.047,688 L223.954,688 L223.954,688 Z M216.047,686 C216.1,684.239 216.26,682.507 216.562,680.844 C217.687,680.942 218.832,681 220,681 C221.168,681 222.313,680.942 223.438,680.844 C223.74,682.507 223.9,684.239 223.954,686 L216.047,686 L216.047,686 Z M230.219,677.446 C228.586,677.962 226.862,678.356 225.064,678.621 C224.645,676.789 224.1,675.05 223.434,673.441 C226.073,674.108 228.415,675.523 230.219,677.446 L230.219,677.446 Z M231.596,679.171 C232.936,681.146 233.783,683.479 233.962,686 L225.957,686 C225.907,684.141 225.75,682.325 225.455,680.592 C227.622,680.285 229.681,679.808 231.596,679.171 L231.596,679.171 Z M220,671 C211.164,671 204,678.163 204,687 C204,695.837 211.164,703 220,703 C228.836,703 236,695.837 236,687 C236,678.163 228.836,671 220,671 L220,671 Z"></path>
           </g>
         </svg>
-        <span id="language-link-en-label" hidden aria-hidden="true">English</span>
+        <span id="language-link-en-label" class="sr-only">English</span>
         <a name="language-link" href="#" class="footer-nav-link en" aria-labelledby="language-link-en-label">EN<a>
-        <span id="language-link-pt-label" hidden aria-hidden="true">Português</span>
-        <a name="language-link" id="language-link-pt" href="#" class="footer-nav-link pt" aria-labelledby="language-link-pt-label">PT</a>
+        <span id="language-link-pt-label" class="sr-only">Português</span>
+        <a name="language-link" href="#" class="footer-nav-link pt" aria-labelledby="language-link-pt-label">PT</a>
       </nav>
       <p class="footer-credits">
         <span data-translation="footer.credits">made with 💜 by</span> <a href="https://github.com/novcmbro" class="footer-credits-novcmbro-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">Novcmbro</a>
       </p>
       <nav class="footer-nav" aria-labelledby="theme-nav-label">
-        <span id="theme-nav-label" hidden aria-hidden="true" data-translation="footer.theme.label">Change theme</span>
+        <span id="theme-nav-label" class="sr-only" data-translation="footer.theme.label">Change theme</span>
         <a name="theme-link" href="#" class="footer-nav-link light" aria-labelledby="theme-link-light-label">
-          <span id="theme-link-light-label" hidden aria-hidden="true" data-translation="footer.theme.light.text">Light theme</span>
-          <span id="theme-link-light-icon-label" hidden aria-hidden="true" data-translation="footer.theme.light.icon">Sun</span>
+          <span id="theme-link-light-label" class="sr-only" data-translation="footer.theme.light.text">Light theme</span>
+          <span id="theme-link-light-icon-label" class="sr-only" data-translation="footer.theme.light.icon">Sun</span>
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="theme-link-light-icon-label">
             <path d="M12 4V2M12 20V22M6.41421 6.41421L5 5M17.728 17.728L19.1422 19.1422M4 12H2M20 12H22M17.7285 6.41421L19.1427 5M6.4147 17.728L5.00049 19.1422M12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         </a>
         <a name="theme-link" href="#" class="footer-nav-link dark" aria-labelledby="theme-link-dark-label">
-          <span id="theme-link-dark-label" hidden aria-hidden="true" data-translation="footer.theme.dark.text">Dark theme</span>
-          <span id="theme-link-dark-icon-label" hidden aria-hidden="true" data-translation="footer.theme.dark.icon">Moon</span>
+          <span id="theme-link-dark-label" class="sr-only" data-translation="footer.theme.dark.text">Dark theme</span>
+          <span id="theme-link-dark-icon-label" class="sr-only" data-translation="footer.theme.dark.icon">Moon</span>
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="theme-link-dark-icon-label">
             <path d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
@@ -134,7 +135,7 @@
     <div class="popup">
       <p id="popup-message" class="popup-message"></p>
       <div class="button-container">
-        <button id="popup-ok-button" type="button" class="button button-primary">OK</button>
+        <button id="popup-ok-button" type="button" class="button button-primary" tabindex="1">OK</button>
       </div>
     </div>
   </div>

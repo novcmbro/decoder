@@ -6,7 +6,11 @@ const enUS = {
     placeholder: "Type your text",
     message: {
       icon: "Alert",
-      text: "Only lowercase letters with no accent (a-z), dots (.), commas (,), exclamation (!) and question marks (?) are accepted."
+      text: "Only lowercase letters with no accent (a-z), dots (.), commas (,), exclamation (!) and question marks (?) are accepted.",
+      success: {
+        encrypt: "Text successfully encrypted!",
+        decrypt: "Text successfully decrypted!"
+      }
     },
     encrypt: "Encrypt",
     decrypt: "Decrypt",
@@ -40,18 +44,21 @@ const enUS = {
   footer: {
     language: {
       label: "Change language",
-      icon: "Globe"
+      icon: "Globe",
+      alert: "Language changed to English."
     },
     credits: "made with 💜 by",
     theme: {
       label: "Change theme",
       light: {
         text: "Light theme",
-        icon: "Sun"
+        icon: "Sun",
+        alert: "Theme changed to light."
       },
       dark: {
         text: "Dark theme",
-        icon: "Moon"
+        icon: "Moon",
+        alert: "Theme changed to dark."
       }
     }
   }

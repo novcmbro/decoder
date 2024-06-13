@@ -37,6 +37,7 @@ translation.change = ({ target }) => {
   localStorage.setItem(localStorageKey, target.textContent.toLowerCase())
   translation.init()
   translation.translateElements()
+  document.querySelector("#sr-alert").textContent = translation.get("footer.language.alert")
 }
 
 translation.init = () => {
@@ -58,7 +59,6 @@ translation.init = () => {
     const hasInvalidId = hasId && !id.match(`^[a-z${separator.nesting}${separator.word}]+$`)
 
     if (hasId && !hasInvalidId) {
-      element.ariaLive = "polite"
       element.textContent = translation.get(id)
     }
   }

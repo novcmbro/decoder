@@ -8,6 +8,8 @@ const outputField = document.querySelector("#output-field")
 const outputPlaceholder = document.querySelector("#output-placeholder")
 const encryptButton = document.querySelector("#encrypt-button")
 const decryptButton = document.querySelector("#decrypt-button")
+const copyButton = document.querySelector("#copy-button")
+const screenReaderAlert = document.querySelector("#sr-alert")
 
 const cryptography = {
   data: undefined,
@@ -42,12 +44,14 @@ cryptography.validate = (target) => {
     const result = validation()
 
     if (typeof result === "string" && result !== inputField.value) {
+      inputFieldMessage.setAttribute("role", "alert")
       inputFieldMessage.textContent = result
-      name !== "alreadyDecoded" && (outputField.value = "")
+      name !== "alreadyDecoded" ? (outputField.value = "") : copyButton.focus()
       return false
     }
   }
   
+  inputFieldMessage.removeAttribute("role")
   inputFieldMessage.textContent = translation.get("input.message.text")
   return true
 }
@@ -57,6 +61,8 @@ cryptography.submit = ({ target }) => {
   
   if (isFieldValid) {
     outputField.value = cryptography.data(target).result
+    screenReaderAlert.textContent = translation.get(`input.message.success.${target.id.includes("encrypt") ? "encrypt" : "decrypt"}`)
+    copyButton.focus()
     inputField.value = ""
   }
 
@@ -76,6 +82,7 @@ input.toggleSectionFocus = ({ type }) => {
 
 input.clearError = () => {
   if (inputSectionClasses.contains("input-field-is-invalid")) {
+    inputFieldMessage.removeAttribute("role")
     inputFieldMessage.textContent = translation.get("input.message.text")
     inputSectionClasses.remove("input-field-is-invalid")
   }

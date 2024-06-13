@@ -6,7 +6,11 @@ const ptBR = {
     placeholder: "Digite seu texto",
     message: {
       icon: "Alerta",
-      text: "Apenas letras minúsculas sem acento (a-z), pontos (.), vírgulas (,), pontos de exclamação (!) e interrogação (?) são aceitos."
+      text: "Apenas letras minúsculas sem acento (a-z), pontos (.), vírgulas (,), pontos de exclamação (!) e interrogação (?) são aceitos.",
+      success: {
+        encrypt: "Texto criptografado com sucesso!",
+        decrypt: "Texto descriptografado com sucesso!"
+      }
     },
     encrypt: "Criptografar",
     decrypt: "Descriptografar",
@@ -40,18 +44,21 @@ const ptBR = {
   footer: {
     language: {
       label: "Mudar idioma",
-      icon: "Globo"
+      icon: "Globo",
+      alert: "Idioma alterado para Português."
     },
     credits: "feito com 💜 por",
     theme: {
       label: "Mudar tema",
       light: {
         text: "Tema claro",
-        icon: "Sol"
+        icon: "Sol",
+        alert: "Tema alterado para claro."
       },
       dark: {
         text: "Tema escuro",
-        icon: "Lua"
+        icon: "Lua",
+        alert: "Tema alterado para escuro."
       }
     }
   }
