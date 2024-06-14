@@ -17,4 +17,6 @@
 - [`LICENSE`](/LICENSE): Licença MIT.
 - [`README.md`](/README.md): Informações gerais do projeto em Inglês.
 
+<br>
+
 ### [🡨 voltar](/docs/pt/index.md)
