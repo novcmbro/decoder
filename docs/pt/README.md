@@ -12,7 +12,7 @@
   ![Status - Completo](https://img.shields.io/badge/status-completo-success?style=for-the-badge)
   ![Autor - Novcmbro](https://img.shields.io/badge/autor-novcmbro-BBBBBB?style=for-the-badge)
 
-  ### [**Ver demo 🡭**](https://novcmbro.github.io/decoder) | [**Read in English 🡭**](https://github.com/novcmbro/decoder/blob/main/README.md)
+  ### [**Ver demo 🡭**](https://novcmbro.github.io/decoder) • [**Ler documentação 🡭**](/docs/pt/index.md) • [**Read in English 🡭**](/README.md)
 
   <picture>
     <source srcset="https://raw.githubusercontent.com/novcmbro/novcmbro.github.io/main/src/img/project-decoder-dark.png" media="(prefers-color-scheme: dark)">
@@ -65,7 +65,7 @@ Se você deseja contribuir para este projeto, siga os seguintes passos:
 <p align="right"><a href="#topo">🡩 voltar ao topo</a></p>
 
 ## Licença
-Distribuído sob a Licença MIT. Veja [**LICENSE**](https://github.com/novcmbro/decoder/blob/main/LICENSE) para mais informações.
+Distribuído sob a Licença MIT. Veja [**LICENSE**](/LICENSE) para mais informações.
 <p align="right"><a href="#top">🡩 voltar ao topo</a></p>
 
 > ©2024 Decoder — Feito com 💜 por Novembro
