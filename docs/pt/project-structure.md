@@ -1,4 +1,4 @@
-## Decoder - 1. Estrutura do Projeto
+# Decoder - 1. Estrutura do Projeto
 - [`/docs`](/docs)
   - [`/en`](/docs/en): Documentação em Inglês.
     - [`/index.md`](/docs/en/index.md): Tabela de conteúdos.
@@ -19,4 +19,4 @@
 
 <br>
 
-### [🡨 voltar](/docs/pt/index.md)
+### [🡨 anterior](/docs/pt/index.md) • [próximo 🡪](/docs/pt/features.md)
