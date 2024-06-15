@@ -1,5 +1,5 @@
 # Decoder - 2. Funcionalidades
-## 2.1. Tradução
+## 2.2. Tradução
 ### translation.js
 O valor inicial do código do idioma é detectado através de `navigator.language` e salvo localmente no navegador em `localStorage`. Se o navegador não suportar o método `navigator`, o idioma inicial será Inglês. O código armazenado é usado para acessar o objeto `languages`, que contém textos de traduções do diretório [`/locales`](/src/locales). As traduções são inseridas nos elementos do documento pelo atributo `data-translation`, que contém a(s) chave(s) para acessar o texto correspondente.
 
