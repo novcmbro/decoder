@@ -12,4 +12,4 @@ O valor inicial do código do idioma é detectado através de `navigator.languag
 
 <br>
 
-### [🡨 anterior](/docs/pt/feature-theme.md)
+### [🡨 anterior](/docs/pt/feature-theme.md) • [próximo 🡪](/docs/pt/feature-cryptography.md)

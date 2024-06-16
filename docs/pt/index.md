@@ -7,6 +7,7 @@
 2      | [Funcionalidades](/docs/pt/features.md)
 2.1    | [Funcionalidades - Tema](/docs/pt/feature-theme.md)
 2.2    | [Funcionalidades - Tradução](/docs/pt/feature-translation.md)
+2.3    | [Funcionalidades - Criptografia](/docs/pt/feature-cryptography.md)
 
 <br>
 

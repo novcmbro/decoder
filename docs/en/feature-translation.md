@@ -12,4 +12,4 @@ The initial language code value is detected through `navigator.language` and sav
 
 <br>
 
-### [🡨 previous](/docs/en/feature-theme.md)
+### [🡨 previous](/docs/en/feature-theme.md) • [next 🡪](/docs/en/feature-cryptography.md)
