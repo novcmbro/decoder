@@ -17,4 +17,4 @@ Encryption replaces each letter by its corresponding term and decryption replace
 
 <br>
 
-### [🡨 previous](/docs/en/feature-translation.md)
+### [🡨 previous](/docs/en/feature-translation.md) • [next 🡪](/docs/en/feature-copy.md)

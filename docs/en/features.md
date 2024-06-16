@@ -6,6 +6,7 @@ Index | Title
 1     | [Theme](/docs/en/feature-theme.md)
 2     | [Translation](/docs/en/feature-translation.md)
 3     | [Cryptography](/docs/en/feature-cryptography.md)
+4     | [Copy](/docs/en/feature-copy.md)
 
 <br>
 

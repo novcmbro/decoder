@@ -17,4 +17,4 @@ Criptografia substitui cada letra por seu termo correspondente e descriptografia
 
 <br>
 
-### [🡨 anterior](/docs/pt/feature-translation.md)
+### [🡨 anterior](/docs/pt/feature-translation.md) • [próximo 🡪](/docs/pt/feature-copy.md)

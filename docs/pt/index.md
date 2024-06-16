@@ -8,6 +8,7 @@
 2.1    | [Funcionalidades - Tema](/docs/pt/feature-theme.md)
 2.2    | [Funcionalidades - Tradução](/docs/pt/feature-translation.md)
 2.3    | [Funcionalidades - Criptografia](/docs/pt/feature-cryptography.md)
+2.4    | [Funcionalidades - Cópia](/docs/pt/feature-copy.md)
 
 <br>
 

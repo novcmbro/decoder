@@ -8,6 +8,7 @@ Index | Title
 2.1   | [Features - Theme](/docs/en/feature-theme.md)
 2.2   | [Features - Translation](/docs/en/feature-translation.md)
 2.3   | [Features - Cryptography](/docs/en/feature-cryptography.md)
+2.4   | [Features - Copy](/docs/en/feature-copy.md)
 
 <br>
 
