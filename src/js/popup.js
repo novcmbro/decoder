@@ -5,6 +5,7 @@ const popup = {
   toggleVisibility: undefined,
   open: undefined,
   close: undefined,
+  trapFocus: undefined,
   init: undefined
 }
 
@@ -22,27 +23,29 @@ popup.open = (message) => {
 
 popup.close = popup.toggleVisibility
 
-popup.init = () => {
+popup.trapFocus = (e) => {
   const focusableElements = popupElement.querySelectorAll("a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled])")
   const firstFocusableElement = focusableElements[0]
   const lastFocusableElement = focusableElements[focusableElements.length - 1]
+  const isTabPressed = (e.key === "Tab" || e.keyCode === 9)
+  
+  if (!isTabPressed) {
+    return
+  }
+  
+  if (e.shiftKey && document.activeElement === firstFocusableElement) /* shift + tab */ {
+    lastFocusableElement.focus()
+    e.preventDefault()
+  }
+  
+  else if (document.activeElement === lastFocusableElement) /* tab */ {
+    firstFocusableElement.focus()
+    e.preventDefault()
+  }
+}
 
-  popupElement.addEventListener("keydown", (e) => {
-    const isTabPressed = (e.key === "Tab" || e.keyCode === 9)
-
-    if (!isTabPressed) {
-      return
-    }
-
-    if (e.shiftKey && document.activeElement === firstFocusableElement) /* shift + tab */ {
-      lastFocusableElement.focus()
-      e.preventDefault()
-    } else if (document.activeElement === lastFocusableElement) /* tab */ {
-      firstFocusableElement.focus()
-      e.preventDefault()
-    }
-  })
-
+popup.init = () => {
+  popupElement.addEventListener("keydown", popup.trapFocus)
   popupButton.addEventListener("click", popup.close)
 }
 
