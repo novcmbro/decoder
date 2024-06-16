@@ -34,10 +34,14 @@ translation.translateElements = () => {
 }
 
 translation.change = ({ target }) => {
-  localStorage.setItem(localStorageKey, target.textContent.toLowerCase())
-  translation.init()
-  translation.translateElements()
-  document.querySelector("#sr-alert").textContent = translation.get("footer.language.alert")
+  const selectedLanguage = target.textContent.toLowerCase()
+
+  if (translation.language() !== selectedLanguage) {
+    localStorage.setItem(localStorageKey, selectedLanguage.toLowerCase())
+    translation.init()
+    translation.translateElements()
+    document.querySelector("#sr-alert").textContent = translation.get("footer.language.alert")
+  }
 }
 
 translation.init = () => {
