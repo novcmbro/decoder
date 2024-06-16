@@ -9,6 +9,7 @@
 2.2    | [Funcionalidades - Tradução](/docs/pt/feature-translation.md)
 2.3    | [Funcionalidades - Criptografia](/docs/pt/feature-cryptography.md)
 2.4    | [Funcionalidades - Cópia](/docs/pt/feature-copy.md)
+2.5    | [Funcionalidades - Popup](/docs/pt/feature-popup.md)
 
 <br>
 

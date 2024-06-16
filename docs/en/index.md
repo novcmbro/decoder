@@ -9,6 +9,7 @@ Index | Title
 2.2   | [Features - Translation](/docs/en/feature-translation.md)
 2.3   | [Features - Cryptography](/docs/en/feature-cryptography.md)
 2.4   | [Features - Copy](/docs/en/feature-copy.md)
+2.5   | [Features - Popup](/docs/en/feature-popup.md)
 
 <br>
 

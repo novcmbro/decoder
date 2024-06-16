@@ -7,6 +7,7 @@
 2      | [Tradução](/docs/pt/feature-translation.md)
 3      | [Criptografia](/docs/pt/feature-cryptography.md)
 4      | [Cópia](/docs/pt/feature-copy.md)
+5      | [Popup](/docs/pt/feature-popup.md)
 
 <br>
 

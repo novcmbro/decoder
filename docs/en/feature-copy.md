@@ -10,4 +10,4 @@ Copies the encrypted or decrypted output text to clipboard and alerts if copy wa
 
 <br>
 
-### [🡨 previous](/docs/en/feature-cryptography.md)
+### [🡨 previous](/docs/en/feature-cryptography.md) • [next 🡪](/docs/en/feature-popup.md)

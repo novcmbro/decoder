@@ -10,4 +10,4 @@ Copia o texto de saída criptografado ou descriptografado para a área de transf
 
 <br>
 
-### [🡨 anterior](/docs/pt/feature-cryptography.md)
+### [🡨 anterior](/docs/pt/feature-cryptography.md) • [próximo 🡪](/docs/pt/feature-popup.md)
