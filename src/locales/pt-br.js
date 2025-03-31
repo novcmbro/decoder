@@ -47,7 +47,7 @@ const ptBR = {
       icon: "Globo",
       alert: "Idioma alterado para Português."
     },
-    credits: "feito com 💜 por",
+    credits: "feito por",
     theme: {
       label: "Mudar tema",
       light: {

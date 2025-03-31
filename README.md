@@ -10,7 +10,7 @@
 
   ![License - MIT](https://img.shields.io/badge/license-MIT-informational?style=for-the-badge)
   ![Status - Completed](https://img.shields.io/badge/status-completed-success?style=for-the-badge)
-  ![Author - Novcmbro](https://img.shields.io/badge/author-novcmbro-BBBBBB?style=for-the-badge)
+  ![Author - Novembro](https://img.shields.io/badge/author-novembro-BBBBBB?style=for-the-badge)
 
   ### [**View demo 🡭**](https://novcmbro.github.io/decoder) • [**Read docs 🡭**](/docs/en/index.md) • [**Ler em Português 🡭**](/docs/pt/README.md)
 
@@ -47,7 +47,7 @@ Decoder is a tool to encrypt and decrypt text by replacing each letter with a co
 <p align="right"><a href="#top">🡩 back to top</a></p>
 
 ## Contributors
-| [<img src="https://github.com/novcmbro.png" alt="Novcmbro" width="100px" height="100px"><br><sub>Novcmbro</sub>](https://github.com/novcmbro) |
+| [<img src="https://github.com/novcmbro.png" alt="Novembro" width="100px" height="100px"><br><sub>Novembro</sub>](https://github.com/novcmbro) |
 | :---: |
 
 [![Gmail](https://img.shields.io/badge/gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:novcmbro@gmail.com)
@@ -68,4 +68,4 @@ If you would like to contribute to this project, follow these steps:
 Distributed under the MIT License. See [**LICENSE**](/LICENSE) for more information.
 <p align="right"><a href="#top">🡩 back to top</a></p>
 
-> ©2024 Decoder — Made with 💜 by Novembro
+> ©2024 Decoder — Made by Novembro

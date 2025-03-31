@@ -47,7 +47,7 @@ const enUS = {
       icon: "Globe",
       alert: "Language changed to English."
     },
-    credits: "made with 💜 by",
+    credits: "made by",
     theme: {
       label: "Change theme",
       light: {
